@@ -160,15 +160,15 @@ ifeq ($(PLATFORM_NAME),iphoneos)
     SDK_NAME = iphoneos$(IOS_SDK_VERSION)
     ifeq ($(ARCHFLAGS),)
         ifeq ($(OPTIMIZE),yes)
-            ARCHFLAGS = -arch armv7 -arch armv7s -arch arm64
+            ARCHFLAGS = -arch armv7 -arch armv7s
         else
-            ARCHFLAGS = -arch armv7 -arch arm64
+            ARCHFLAGS = -arch armv7
         endif
     endif
 else ifeq ($(PLATFORM_NAME),iphonesimulator)
     SDK_NAME = iphonesimulator$(IOS_SDK_VERSION)
     ifeq ($(ARCHFLAGS),)
-        ARCHFLAGS = -arch i386 -arch x86_64
+        ARCHFLAGS = -arch i386
     endif
 else
     SDK_NAME = macosx$(OSX_SDK_VERSION)
