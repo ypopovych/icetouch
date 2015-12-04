@@ -235,7 +235,7 @@ mklibfilename = lib$(1).a
 mklib		= if [ ! -d "$(dir $1)" ]; then mkdir -p $(dir $1); fi; \
 	    	  echo "libtool -static -o $1 $2"; \
 		  rm -f $(1); \
-		  libtool -no_warning_for_no_symbols -static -o $(1) $(2)
+		  libtool -static -o $(1) $(2)
 
 mklibtargets	= $(3)
 
