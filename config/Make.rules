@@ -213,8 +213,10 @@ else
     CPPPLATFORMFLAGS   += -mmacosx-version-min=$(OSX_TARGET_MIN_SDK_VERSION)
 endif
 
+CPPPLATFORMFLAGS += -stdlib=libc++
+
 LDPLATFORMFLAGS	 := $(CPPPLATFORMFLAGS)
-CPPPLATFORMFLAGS += -pthread -fvisibility=hidden
+CPPPLATFORMFLAGS += -pthread -fvisibility=hidden -std=c++11
 
 ifneq ($(shell $(CXX) --help | grep fembed-bitcode),)
 ifneq ($(PLATFORM_NAME),macosx)
