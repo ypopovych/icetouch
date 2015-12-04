@@ -216,7 +216,7 @@ endif
 CPPPLATFORMFLAGS += -stdlib=libc++
 
 LDPLATFORMFLAGS	 := $(CPPPLATFORMFLAGS)
-CPPPLATFORMFLAGS += -pthread -fvisibility=hidden -std=c++11
+CPPPLATFORMFLAGS += -pthread -fvisibility=hidden
 
 ifneq ($(shell $(CXX) --help | grep fembed-bitcode),)
 ifneq ($(PLATFORM_NAME),macosx)
